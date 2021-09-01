@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A Coding Project By Chris Hartsell</title>
+    <title>ThinkInReverse: A Coding Project By Chris Hartsell</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,7 +28,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="/img/LogoOnlyTransparentPNG.png" alt="Chris Hartsell Logo" height="45">
-                APP NAME
+                ThinkInReverse
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +46,7 @@
                         <a class="nav-link" href="code.html">The Code</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="#">Git Repo</a>
+                        <a class="nav-link" target="_blank" href="https://github.com/FinalSq/ThinkInReverse.git">Git Repo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" target="_blank" href="https://hartsell-portfolio.netlify.app">About</a>
@@ -59,7 +59,60 @@
     <!-- Main -->
     <main class="flex-shrink-0">
         <div class="container">
+            <div class="row row-cols-1 row-cols-md-2 mt-5">
+                <!-- Left Column -->
+                <div class="col">
+                    <div>
+                        <h1><strong>ThinkInReverse: A Coding Project</strong></h1>
+                        <p>
+                            A palindrome is a word, phrase, or sequence
+                            that reads teh same backward as forward. Write
+                            a program that checks if the phrase entered is a 
+                            palindrome.
+                        </p>
+                    </div>
+                </div>
+                <!-- Right Column -->
+                <div class="col">
+                    <!-- String Input and Button -->
+                    <div>
+                        <h4 class="border-bottom border-3 border-danger"><strong>Enter a String to be Reversed</strong>
+                        </h4>
+                    </div>
+                    <form class="row row-cols-1">
+                        <div class="col">
+                            <input id="userString" type="text" class="form-control" placeholder="Enter A String"
+                                aria-label="String Input">
+                        </div>
+                        <div class="col d-flex justify-content-center">
+                            <div class="me-2">
+                                <button id="submitBtn" type="button" class="btn btn-danger mt-2">Check It</button>
+                            </div>
+                            <div>
+                                <button id="clearBtn" type="button" class="btn btn-dark mt-2">Clear Screen</button>
+                            </div>
+                        </div>
+                        <!-- Section that reveals when button is pressed -->
+                        <div id="reveal" class="alert alert-danger mt-5 invisible">
+                            <div class="border-bottom border-2 borderLRed">
+                                <h1 id="topMsg" class="text-danger fw-bold">
+                                    <!-- Insert topMsg Here -->
+                                </h1>
+                            </div>
+                            <hr>
+                            <div>
+                                <p id="msg" class="mt-3">
+                                    <!-- Insert a Message Here-->
+                                </p>
+                            </div>
+                        </div>
+                        <!-- This Ends the reveal section -->
+                    </form>
 
+
+
+                </div>
+            </div>
         </div>
     </main>
 
@@ -95,6 +148,10 @@
     </script>
     <!-- Link to External JS -->
     <script src="/js/site.js"></script>
+    <script>
+        document.getElementById("submitBtn").addEventListener("click", controlFunction);
+        document.getElementById("clearBtn").addEventListener("click", clearReveal);
+    </script>
 </body>
 
 </html>
